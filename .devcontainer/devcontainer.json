@@ -7,7 +7,11 @@
 	"workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
 
 	// Features to add to the dev container. More info: https://containers.dev/features.
-	// "features": {},
+	"features": {
+		"ghcr.io/devcontainers/features/sshd:1": {
+			"version": "latest"
+		},
+	},
 
 	// For use with PHP or Apache (e.g.php -S localhost:8080 or apache2ctl start)
 	"forwardPorts": [8080, 3306],
@@ -19,13 +23,14 @@
   "customizations" : {
     "vscode": {
       "extensions": [
-        "GitHub.copilot"
+        "GitHub.copilot",
+        "ms-azuretools.vscode-docker"
       ]
     },
     "jetbrains" : {
-      "backend" : "PhpStorm",
+      "backend" : "PhpStorm"
     }
-  },
+  }
 
 	// Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
 	// "remoteUser": "root"
